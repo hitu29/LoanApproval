@@ -1,2 +1,11 @@
 package com;
 
+import com.Applicant;
+
+rule "approve applicants"
+when
+    $a: Applicant(age > 30, money > 1000, approved == false)
+then
+    modify($a) {
+        setApproved(true);
+    }
