@@ -9,3 +9,4 @@ then
     modify($a) {
         setApproved(true);
     }
+end
